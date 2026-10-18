@@ -1,0 +1,14 @@
+<!DOCTYPE html><html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Profil — EduSmart AI</title><link rel="stylesheet" href="style.css"></head><body><main>
+<section style="padding-top:14vh"><h1 style="font-size:clamp(2.2rem,6vw,4.5rem)">Profilingizni yarating</h1>
+<div class="card" style="margin-top:28px;max-width:560px"><label>Ismingiz</label><input id="n" placeholder="Masalan, Aziza">
+<label>Yoshingiz</label><input id="a" type="number" min="7" max="99" placeholder="12">
+<label>Fan yoki mavzu</label><input id="s" placeholder="Matematika">
+<label>Bilim darajasi</label><select id="l"><option>Boshlang‘ich</option><option>O‘rta</option><option>Yuqori</option></select>
+<label>Asosiy maqsad</label><select id="g"><option>Imtihonga tayyorlanish</option><option>Maktab darsini o‘zlashtirish</option><option>Amaliy ko‘nikma hosil qilish</option></select>
+<button class="btn" id="go">Saqlash ✅</button></div>
+<div class="card hide" id="res" style="margin-top:20px;max-width:560px"></div></section></main>
+<script src="app.js"></script><script>
+$('#go').onclick=()=>{const n=$('#n').value||'Do‘stim',a=+$('#a').value;localStorage.setItem('esName',n);
+const m=a<12?'o‘yin va ertak tilida 🧸':a<17?'qiziqarli faktlar va amaliy savollar bilan 🔬':'tizimli va chuqur tahlil bilan 🎓';
+const r=$('#res');r.classList.remove('hide');r.innerHTML=`<h3>Zo‘r, ${n}!</h3><p>${$('#s').value||'Tanlangan fan'} bo‘yicha darslar sizga ${m} o‘tiladi.</p><a class="btn" href="darslar.html">Darsni boshlash 📖</a>`}
+</script></body></html>

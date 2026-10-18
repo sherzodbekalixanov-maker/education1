@@ -1,0 +1,15 @@
+<!DOCTYPE html><html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Darslar — EduSmart AI</title><link rel="stylesheet" href="style.css"></head><body><main>
+<section style="padding-top:14vh"><h1 style="font-size:clamp(2.2rem,6vw,4.5rem)">Mini-dars: Fotosintez</h1>
+<p>Yoshingizni tanlang — tushuntirish usuli o‘zgaradi.</p>
+<div class="tabs"><button class="btn" data-t="0">7–11 yosh 🧸</button><button class="btn" data-t="1">12–16 yosh 🔬</button><button class="btn" data-t="2">17+ 🎓</button></div>
+<div class="card" id="box"></div></section>
+<section><h2>Mavzuni 3 usulda mashq qiling</h2><div class="grid">
+<div class="card"><em>👀</em><h3>Ko‘ring</h3><p>Barg — kichkina quyosh paneli. Uni tasavvur qiling.</p></div>
+<div class="card"><em>🗣️</em><h3>Ayting</h3><p>Fotosintezni ovoz chiqarib do‘stingizga tushuntiring.</p></div>
+<div class="card"><em>🤹</em><h3>Qiling</h3><p>Deraza oldiga o‘simlik qo‘yib, bir hafta kuzating.</p></div></div>
+<a class="btn" href="test.html">Testga o‘tish 🎯</a><a class="btn" href="sos.html">Tushunmadim 🆘</a></section></main>
+<script src="app.js"></script><script>
+const T=['<h3>Bargcha — oshpaz! 🍃</h3><p>Barg quyosh nurini, suvni va havoni olib, o‘simlikka ovqat pishiradi. Bu ovqat — shakar!</p>','<h3>Bargdagi mini-zavod 🏭</h3><p>Xlorofill nurni ushlaydi, o‘simlik CO₂ va suvdan glyukoza yasaydi. Qiziq fakt: biz nafas oladigan kislorod shu yerdan keladi!</p>','<h3>6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂</h3><p>Jarayon ikki bosqichda: yorug‘lik bosqichi (tilakoidlar, ATP/NADPH) va Kalvin sikli (stromada CO₂ fiksatsiyasi). Samaradorlik yorug‘lik, harorat va CO₂ ga bog‘liq.</p>'];
+document.querySelectorAll('[data-t]').forEach(b=>b.onclick=()=>{const x=$('#box');x.style.transform='rotateY(90deg)';setTimeout(()=>{x.innerHTML=T[b.dataset.t];x.style.transform=''},250)});
+$('#box').innerHTML=T[1];
+</script></body></html>

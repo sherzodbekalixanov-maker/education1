@@ -1,0 +1,9 @@
+<!DOCTYPE html><html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SOS — EduSmart AI</title><link rel="stylesheet" href="style.css"></head><body><main>
+<section style="padding-top:14vh"><h1 style="font-size:clamp(2.2rem,6vw,4.5rem)">SOS tushuntirish 🆘</h1>
+<p>Mavzu: kasrlar. Agar qiyin tuyulsa, tugmani bosing.</p>
+<button class="btn" id="b">Tushunmadim 😵</button>
+<div class="card hide" id="c" style="margin-top:24px"></div></section></main>
+<script src="app.js"></script><script>
+const S=[['Xavotir olmang! 💜','Kasrlar ko‘pchilikka boshida qiyin tuyuladi. Birgalikda osongina o‘rganamiz.'],['Pitsa o‘xshatishi 🍕','Kasr — butun narsaning bo‘lagi. Pitsa 4 bo‘lakka kesilgan, siz 1 tasini yedingiz: bu 1/4.'],['1-qadam: pastdagi son 🔢','Pastdagi son pitsa nechta teng bo‘lakka kesilganini bildiradi. 8 bo‘lakka kesilsa, pastda nechta bo‘ladi?'],['Sizning navbatingiz 🎯','Pitsa 8 bo‘lak, siz 3 tasini yedingiz. Kasrni yozing va qayerdan boshlashni o‘zingiz aytib bering!']];
+let i=0;$('#b').onclick=()=>{const c=$('#c');c.classList.remove('hide');c.innerHTML=`<h3>${S[i][0]}</h3><p>${S[i][1]}</p>`;i=(i+1)%S.length;$('#b').textContent=i?'Keyingi qadam ➡️':'Qaytadan 🔁'}
+</script></body></html>

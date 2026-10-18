@@ -1,0 +1,8 @@
+<!DOCTYPE html><html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Test — EduSmart AI</title><link rel="stylesheet" href="style.css"></head><body><main>
+<section style="padding-top:14vh"><h1 style="font-size:clamp(2.2rem,6vw,4.5rem)">Mini-test 🎯</h1><p id="sc">Ball: 0</p><div class="card" id="q"></div></section></main>
+<script src="app.js"></script><script>
+const Q=[['Pitsaning 8 bo‘lagidan 2 tasini yedingiz. Qaysi kasr?',['2/8','8/2','2/10'],0,'Yuqorida yeyilgan, pastda jami bo‘laklar turadi.'],['O‘simlik fotosintezda qaysi gazni chiqaradi?',['CO₂','Kislorod','Azot'],1,'Biz nafas olish uchun aynan shu gazga muhtojmiz.'],['Qaysi o‘rganish usuli kinestetik?',['Rasm chizish va tajriba qilish','Faqat o‘qish','Faqat tinglash'],0,'Kinestetik — harakat va mashq orqali.']];
+let i=0,s=0;function show(){const q=$('#q');if(i>=Q.length){q.innerHTML=`<h3>Tugadi! 🏆</h3><p>Natija: ${s}/${Q.length}</p><a class="btn" href="darslar.html">Darslarga qaytish</a>`;return}
+q.innerHTML=`<h3>${Q[i][0]}</h3>`+Q[i][1].map((t,k)=>`<button class="opt" data-k="${k}">${t}</button>`).join('')+'<p id="m"></p>';
+q.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{if(+b.dataset.k==Q[i][2]){b.classList.add('ok');s++;boom();$('#sc').textContent='Ball: '+s;$('#m').textContent='To‘g‘ri! 🎉 Ajoyib o‘ylading.';i++;setTimeout(show,1200)}else{b.classList.add('no');$('#m').textContent='Hali emas 🤔 Ishora: '+Q[i][3]}})}
+show();</script></body></html>
